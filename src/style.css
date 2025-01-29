@@ -36,3 +36,29 @@
         transform: translateY(-25px);
     }
 }
+
+.slidingLeft {
+    animation: slide_left 900s linear infinite;
+}
+
+@keyframes slide_left {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+.slidingRight {
+    animation: slide_right 900s linear infinite;
+}
+
+@keyframes slide_right {
+    from {
+        transform: translateX(-90%)
+    }
+    to {
+        transform: translateX(0)
+    }
+}

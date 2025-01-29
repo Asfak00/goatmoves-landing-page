@@ -17,18 +17,20 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <MobileNavbar/>
-  <Navbar/>
-  <Hero/>
-  <AboutPlatform/>
-  <OurWorks/>
-  <WhatWeDo/>
-  <WhyChooseUs/>
-  <Pricing/>
-  <Team/>
-  <Partnerships/>
-  <testimonials/>
-  <InvestorMetrics/>
-  <Newsletter/>
-  <Footer/>
+  <div class="overflow-hidden">
+    <MobileNavbar/>
+    <Navbar/>
+    <Hero/>
+    <AboutPlatform/>
+    <OurWorks/>
+    <WhatWeDo/>
+    <WhyChooseUs/>
+    <Pricing/>
+    <Team/>
+    <Partnerships/>
+    <testimonials/>
+    <InvestorMetrics/>
+    <Newsletter/>
+    <Footer/>
+  </div>
 </template>
