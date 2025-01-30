@@ -7,14 +7,14 @@ import DeliveryIcon from "../SvgIcons/DeliveryIcon.vue";
 </script>
 
 <template>
-  <section class="bg-[#ecf7f8] w-full px-[135px] py-[100px]">
+  <section class="bg-[#ecf7f8] w-full py-[60px] 400px:py-[100px]">
 
-   <div class="mx-auto max-w-[1400px]">
+   <div class="mx-auto max-w-[1400px] px-[20px] 1660px:px-0 400px:px-[40px] 1300px:px-[70px]">
      <p class="text-[14px] font-[500] leading-[20px] text-primary_main text-center">What We Do</p>
 
-     <h4 class="text-[48px] font-[600] leading-[60px] text-heading text-center mt-4">Welcome to the Ultimate Digital Destination</h4>
+     <h4 class="text-[39px] 400px:text-[48px] font-[600] leading-[50px] 400px:leading-[60px] text-heading text-center mt-4">Welcome to the Ultimate Digital Destination</h4>
 
-     <div class="grid grid-cols-3 mt-[40px] gap-[30px]">
+     <div class="grid grid-cols-1 400px:grid-cols-2 1040px:grid-cols-3 mt-[40px] gap-[30px]">
 
        <div class="border border-[#C9C9C9] cursor-pointer hover:bg-white transition-all duration-300 hover:border-transparent hover:shadow-[0px_4px_64px_0px_rgba(35,40,105,0.08)] py-[40px] px-[30px]">
          <GoatmovesIcon/>

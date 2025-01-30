@@ -1,4 +1,6 @@
 <script setup>
+import Layout from "../Layouts/Layout.vue";
+
 const testimonials = [
   {
     id: 1,
@@ -326,26 +328,27 @@ const testimonials = [
 </script>
 
 <template>
-  <section class="pb-[100px] mx-auto px-[70px] max-w-[1400px]">
+  <Layout>
+    <section class="pb-[100px]">
 
-    <p class="text-[14px] font-[500] leading-[20px] text-primary_main text-center">Testimonials</p>
-    <h4 class="text-[48px] font-[600] leading-[60px] text-heading text-center mt-4">Our Happy Users Say About us</h4>
+      <p class="text-[14px] font-[500] leading-[20px] text-primary_main text-center">Testimonials</p>
+      <h4 class="text-[39px] 400px:text-[48px] font-[600] leading-[50px] 400px:leading-[60px] text-heading text-center mt-4">Our Happy Users Say About us</h4>
 
-    <div class='w-full mt-[40px] relative'>
+      <div class='w-full mt-[40px] relative'>
 
-      <div class="w-full h-full bg-gray-100 absolute top-0 left-0 blur-[50px]"></div>
+        <div class="w-full h-full bg-gray-100 absolute top-0 left-0 blur-[50px]"></div>
 
-      <div
-          x-data="{}"
-          x-init="$nextTick(() => {
+        <div
+            x-data="{}"
+            x-init="$nextTick(() => {
                         let ul = $refs.logos;
                         ul.insertAdjacentHTML('afterend', ul.outerHTML);
                         ul.nextSibling.setAttribute('aria-hidden', 'true');
                     })"
-          class="w-full inline-flex flex-nowrap overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)]"
-      >
-        <ul x-ref="logos"
-            class="flex items-center gap-[30px] slidingLeft">
+            class="w-full inline-flex flex-nowrap overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)]"
+        >
+          <ul x-ref="logos"
+              class="flex items-center gap-[30px] slidingLeft">
 
             <li v-for="testimonial in testimonials" :key="testimonial?.id" class="bg-white flex items-center gap-[14px] p-5 rounded-full w-[450px]">
               <img :alt="testimonial.name" :src="testimonial.avatar" class="w-[52px] h-[52px] rounded-full object-cover"/>
@@ -354,31 +357,32 @@ const testimonials = [
               </div>
             </li>
 
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      <div
-          x-data="{}"
-          x-init="$nextTick(() => {
+        <div
+            x-data="{}"
+            x-init="$nextTick(() => {
                         let ul = $refs.logos;
                         ul.insertAdjacentHTML('afterend', ul.outerHTML);
                         ul.nextSibling.setAttribute('aria-hidden', 'true');
                     })"
-          class="w-full inline-flex flex-nowrap overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)] mt-[30px]"
-      >
-        <ul x-ref="logos"
-            class="flex items-center gap-[30px] slidingRight">
+            class="w-full inline-flex flex-nowrap overflow-x-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)] mt-[30px]"
+        >
+          <ul x-ref="logos"
+              class="flex items-center gap-[30px] slidingRight">
 
-          <li v-for="testimonial in testimonials" :key="testimonial?.id" class="bg-white flex items-center gap-[14px] p-5 rounded-full w-[450px]">
-            <img :alt="testimonial.name" :src="testimonial.avatar" class="w-[52px] h-[52px] rounded-full object-cover"/>
-            <div>
-              <p class="text-[14px] font-[400[ leading-[30px] text-paragraph">{{testimonial.testimonial}}</p>
-            </div>
-          </li>
+            <li v-for="testimonial in testimonials" :key="testimonial?.id" class="bg-white flex items-center gap-[14px] p-5 rounded-full w-[450px]">
+              <img :alt="testimonial.name" :src="testimonial.avatar" class="w-[52px] h-[52px] rounded-full object-cover"/>
+              <div>
+                <p class="text-[14px] font-[400[ leading-[30px] text-paragraph">{{testimonial.testimonial}}</p>
+              </div>
+            </li>
 
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
 
-  </section>
+    </section>
+  </Layout>
 </template>
