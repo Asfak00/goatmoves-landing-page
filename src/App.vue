@@ -8,11 +8,12 @@ import WhatWeDo from "./components/WhatWeDo.vue";
 import WhyChooseUs from "./components/WhyChooseUs.vue";
 import Pricing from "./components/Pricing.vue";
 import Team from "./components/Team.vue";
-import Partnerships from "./components/Partnerships.vue";
+import Partnerships from "./components/MediaPartnership.vue";
 import Testimonials from "./components/Testimonials.vue";
 import InvestorMetrics from "./components/InvestorMetrics.vue";
 import Newsletter from "./components/Newsletter.vue";
 import Footer from "./components/Footer.vue";
+import CTeam from "./components/CTeam.vue";
 
 </script>
 
@@ -22,15 +23,10 @@ import Footer from "./components/Footer.vue";
     <Navbar/>
     <Hero/>
     <AboutPlatform/>
-    <OurWorks/>
-    <WhatWeDo/>
-    <WhyChooseUs/>
-    <Pricing/>
-    <Team/>
     <Partnerships/>
-    <testimonials/>
+    <CTeam/>
+    <WhyChooseUs/>
     <InvestorMetrics/>
-    <Newsletter/>
     <Footer/>
   </div>
 </template>

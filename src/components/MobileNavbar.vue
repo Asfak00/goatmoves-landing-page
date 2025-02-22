@@ -28,11 +28,11 @@ const sidebarOpen = ref(false)
           </div>
 
           <ul class="flex flex-col items-start px-10 gap-6">
-            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#">About us</a></li>
-            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#">Marketplace</a></li>
-            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#">Features</a></li>
-            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#">Partnerships</a></li>
-            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#">Investor Relations</a></li>
+            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#about-us">About us</a></li>
+<!--            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#">Marketplace</a></li>-->
+            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#features">Features</a></li>
+            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#partnerships">Partnerships</a></li>
+            <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#investor-relations">Investor Relations</a></li>
           </ul>
 
           <div class="flex flex-col px-10 mt-6 gap-6">
@@ -40,10 +40,10 @@ const sidebarOpen = ref(false)
                 class="py-[10px] w-max hover:bg-[#757C88]/90 px-[15px] text-[14px] font-[600] text-[#F8FAFC] bg-[#757C88] underline">
               Join Waitlist
             </button>
-            <button
+            <a href="https://netcapital.com/companies/goatmoves" target="_blank"
                 class="py-[10px] w-max px-[20px] hover:bg-primary_main/90 text-[14px] font-[600] text-[#F8FAFC] bg-primary_main underline">
               Invest Now
-            </button>
+            </a>
           </div>
         </div>
       </Transition>
