@@ -72,14 +72,11 @@ const data = [
             clickable: true,
             el: '.swiper-custom-pagination'
           }"
-            :autoplay="{
-            delay: 5000,
-            disableOnInteraction: false,
-          }"
+
             :modules="[Autoplay, Pagination, Navigation]"
             class="mb-12"
         >
-          <SwiperSlide v-for="(data, index) in data" :key="index">
+          <SwiperSlide class="cursor-pointer" v-for="(data, index) in data" :key="index">
             <div class="bg-white w-full 400px:min-w-full 1040px:min-w-[800px] border-r 400px:border-r-none border-b border-t border-l border-gray-200 flex flex-col-reverse 400px:flex-row items-center justify-between">
 
               <div class="p-[20px] 400px:p-[30px]">
@@ -91,10 +88,10 @@ const data = [
 <!--                  <li class="mt-[10px]">In 2025, Courtney partnered with legendary actor/rapper Ice T to form OG Network</li>-->
 <!--                </ul>-->
 
-                <a :href="data.link" class="text-[14px] 400px:text-[16px] group font-[600] leading-[24px] text-[#00B5E2] flex items-center gap-3 mt-[30px]">
-                  Read More
-                  <Icon icon="material-symbols:arrow-right-alt-rounded" class="text-[24px] group-hover:ml-1.5 transition-all duration-300" />
-                </a>
+<!--                <a :href="data.link" class="text-[14px] 400px:text-[16px] group font-[600] leading-[24px] text-[#00B5E2] flex items-center gap-3 mt-[30px]">-->
+<!--                  Read More-->
+<!--                  <Icon icon="material-symbols:arrow-right-alt-rounded" class="text-[24px] group-hover:ml-1.5 transition-all duration-300" />-->
+<!--                </a>-->
               </div>
 
               <div class="w-full 400px:w-[500px]">

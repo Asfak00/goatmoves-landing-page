@@ -8,7 +8,7 @@ import Layout from "../Layouts/Layout.vue";
     <section class="py-[60px] 400px:py-[100px] flex-col 1040px:flex-row w-full flex items-center justify-center gap-[100px] 400px:gap-[150px]">
       <div class="w-[80%] 400px:w-[70%] 1040px:w-auto">
 
-        <img src="https://i.ibb.co.com/HfBRDVQ6/Group.png" alt="image" class="w-full 400px:w-[500px] mx-auto 1040px:mx-0 1040px:w-[450px]"/>
+        <img src="/images/group.png" alt="image" class="w-full 400px:w-[500px] mx-auto 1040px:mx-0 1040px:w-[450px]"/>
 
       </div>
 

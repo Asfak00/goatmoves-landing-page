@@ -36,10 +36,10 @@ const sidebarOpen = ref(false)
           </ul>
 
           <div class="flex flex-col px-10 mt-6 gap-6">
-            <button
-                class="py-[10px] w-max hover:bg-[#757C88]/90 px-[15px] text-[14px] font-[600] text-[#F8FAFC] bg-[#757C88] underline">
-              Join Waitlist
-            </button>
+<!--            <button-->
+<!--                class="py-[10px] w-max hover:bg-[#757C88]/90 px-[15px] text-[14px] font-[600] text-[#F8FAFC] bg-[#757C88] underline">-->
+<!--              Join Waitlist-->
+<!--            </button>-->
             <a href="https://netcapital.com/companies/goatmoves" target="_blank"
                 class="py-[10px] w-max px-[20px] hover:bg-primary_main/90 text-[14px] font-[600] text-[#F8FAFC] bg-primary_main underline">
               Invest Now

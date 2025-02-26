@@ -1,11 +1,39 @@
 <script setup>
-import {computed} from "vue";
-import DiscordIcon from "../SvgIcons/DiscordIcon.vue";
-import TwitterIcon from "../SvgIcons/TwitterIcon.vue";
-import TelegramIcon from "../SvgIcons/TelegramIcon.vue";
+import {computed, ref} from "vue";
 import YoutubeIcon from "../SvgIcons/YoutubeIcon.vue";
+import FacebookIcon from "../SvgIcons/FacebookIcon.vue";
+import Linkedln from "../SvgIcons/Linkedln.vue";
+import InstaIcon from "../SvgIcons/InstaIcon.vue";
+import axios from "axios";
 
 const currentYear = computed(() => new Date().getFullYear())
+
+const email = ref('');
+
+const API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiY2NlNGMyMjRiYjVmOWQ5OTg2NzFmODE4ZGU3Y2E5MTdkNTgxOTE1OWI0MWZjYjEwZTE4Y2VhOGNmY2QwOWU4NjI1NDUxMTBiOTNiN2ZiNmQiLCJpYXQiOjE3NDA1ODk3MjAuNzc0MDMzLCJuYmYiOjE3NDA1ODk3MjAuNzc0MDM2LCJleHAiOjQ4OTYyNjMzMjAuNzY5MzA0LCJzdWIiOiI5ODU3MjkiLCJzY29wZXMiOltdfQ.DgqYT8QuZ4q5E-3Bv8Zu-zuR93UrGi_3Hdo1v2BUXkqJlebB5dvxj3WeQWd-A7eAMveJ5ztb0V5F_6CG_sw3bJYmwD-8GeTvHCXJPItVWekQE9PAhgMQQpDf_mzi_NfWQF82auKT0NFduFXVKTkw_5xdB-YWiOa-o-7TLzEscjbgRnvTq2TnErtEqN6OhoNK8_sYEwGyLsLk2sUUZ7rDF2uREO2WlpZefoZFfJrYZ_Hz4XFCwfaBTwc98tW3HH80uVEidgWWXB5FcaUc90xcfgMeCM_Q15A1jaMIbtT7oKlp34IlnDfDdzv-7Om2MtbQdpBNhTLVttlzQIovrPO2RI6-_ioBRNY422NZE3IOKBWPoQUMaxvkbPKUDcFq5vAr8lXpIZCO1uuZpPPIVy6P4WSyxafgTI0DIZ5cOqQf8W_o3uuoS80QhtW4OLqxFZ1FoohuJa2L_7yHoJkIwQnapgyV8w4cKBoDi2qR4LWek4JucW7eCBhgeKVEhhnKWts5K_j32bq6B8LQnOM4NSLDTdsDWOr6jba1HKS1LdDWTkjVMd91Gh0vinKxr7aNxYDXxKI5L8ApvrE2U3-3fLBmtA_B1cDl4FSzghKUMplCR_oFRfDZX9DSCP6cFu21hObENxirPdNfOI3dLvUfuIiegH28otSby2s69U5AZab-GQU';
+
+async function subscribe(e) {
+  e.preventDefault();
+  try {
+    const response = await axios.post(
+        "https://connect.mailerlite.com/api/subscribers",
+        {
+          email: email.value,
+          groups: ["147422041196201382"],
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+          },
+        }
+    );
+    alert("Subscribed successfully!");
+    email.value = '';
+  } catch (error) {
+    console.error("Subscription failed:", error.response?.data || error);
+  }
+}
 
 </script>
 
@@ -52,10 +80,10 @@ const currentYear = computed(() => new Date().getFullYear())
           <h4 class="text-[16px] font-[600] leading-[24px] text-heading mb-6">Subscribe to newsletter</h4>
           <p class="text-[16px] font-[400] leading-[24px] text-paragraph">Join our newsletter for exclusive offers, growth insights, and <span class="text-primary_main">GMi</span> updates!</p>
 
-          <div class="relative mt-[30px]">
-            <input type="email" class="px-4 w-full pr-[140px] py-[14px] bg-white border-l border-t border-b border-[#E9E9E9] outline-none text-heading" placeholder="Enter email address"/>
-            <button class="bg-primary_main absolute h-full right-0 py-[15px] px-[30px] text-[14px] font-[600] leading-[20px] text-white hover:bg-primary_main/90">Subscribe</button>
-          </div>
+          <form @submit="subscribe" class="relative mt-[30px]">
+            <input v-model="email" required type="email" class="px-4 w-full pr-[140px] py-[14px] bg-white border-l border-t border-b border-[#E9E9E9] outline-none text-heading" placeholder="Enter email address"/>
+            <button type="submit" class="bg-primary_main absolute h-full right-0 py-[15px] px-[30px] text-[14px] font-[600] leading-[20px] text-white hover:bg-primary_main/90">Subscribe</button>
+          </form>
 
         </div>
       </div>
@@ -65,10 +93,10 @@ const currentYear = computed(() => new Date().getFullYear())
 
         <div class="flex items-center gap-3">
           <p class="text-[14px] font-[400] leading-[24px] text-heading">Follow us on:</p>
-          <DiscordIcon class="cursor-pointer"/>
-          <TwitterIcon class="cursor-pointer"/>
-          <TelegramIcon class="cursor-pointer"/>
-          <YoutubeIcon class="cursor-pointer"/>
+          <FacebookIcon class="cursor-pointer fill-[transparent] stroke-[#657791]"/>
+          <Linkedln class="cursor-pointer fill-[transparent] stroke-[#657791]"/>
+          <InstaIcon class="cursor-pointer fill-[transparent] stroke-[#657791]"/>
+          <YoutubeIcon class="cursor-pointer fill-[transparent] stroke-[#657791]"/>
         </div>
       </div>
 

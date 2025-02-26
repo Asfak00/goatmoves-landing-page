@@ -27,34 +27,36 @@ const swiperOptions = {
 const data = [
   {
     picture: 'https://i.ibb.co.com/Z6XPDVFN/image-37.png',
-    name: 'Rachel Renee, CEO',
-    profession: 'Actor · Producer · Additional Crew',
-    text: 'Low platform fees and versatile listing options to maximize earnings and minimize hassle. In 2025, Courtney partnered with legendary actor/rapper Ice T to form OG Network. In 2025, Courtney partnered with legendary actor/rapper Ice T to form OG Network',
+    name: 'Rachel Renee',
+    profession: 'CEO',
+    text: 'Experienced entrepreneur with a background in government contracting and media.',
     link:''
   },
   {
     picture: 'https://i.ibb.co.com/gF39L0LK/image-38.png',
-    name: 'Matt Stahlmann, CTO',
-    profession: 'Developer',
+    name: 'Matt Stahlmann',
+    profession: 'CTO',
     text: 'Tech innovator and full-stack expert specializing in scalable, high-performance web systems. Tech innovator. full-stack expert specializing in scalable, high-performance web systems.',
     link: ''
   },
   {
     picture: 'https://i.ibb.co.com/WvQxGzG9/image-39.png',
-    name: 'Isaac Wambua, COO',
-    profession: 'COO / Method Man',
+    name: 'Isaac Wambua',
+    profession: 'COO',
     text: 'Operational expert transforming businesses with proven leadership and efficiency solutions.',
     link: ''
   },
   {
     picture: 'https://i.ibb.co.com/7tLFfkCf/image-40.png',
-    name: 'Dan Miller, CFO ',
+    name: 'Dan Miller',
+    profession: 'CFO',
     text: 'Financial strategist with a track record of driving profitability and sustaining competitive growth.',
     link: ''
   },
   {
     picture: 'https://i.ibb.co.com/prh7mqP9/image-41.png',
-    name: 'Keoki Trask, CSO ',
+    name: 'Keoki Trask',
+    profession: 'CSO',
     text: 'IP and product innovator, enhancing market impact through strategic R&D and execution.',
     link: ''
   },
@@ -76,10 +78,6 @@ const data = [
             clickable: true,
             el: '.swiper-custom-pagination'
           }"
-            :autoplay="{
-            delay: 5000,
-            disableOnInteraction: false,
-          }"
             :modules="[Autoplay, Pagination, Navigation]"
             class="mb-12"
         >
@@ -96,10 +94,10 @@ const data = [
                 <!--                  <li class="mt-[10px]">In 2025, Courtney partnered with legendary actor/rapper Ice T to form OG Network</li>-->
                 <!--                </ul>-->
 
-                <a :href="data.link" class="text-[14px] 400px:text-[16px] group font-[600] leading-[24px] text-[#00B5E2] flex items-center gap-3 mt-[30px]">
-                  Read More
-                  <Icon icon="material-symbols:arrow-right-alt-rounded" class="text-[24px] group-hover:ml-1.5 transition-all duration-300" />
-                </a>
+<!--                <a :href="data.link" class="text-[14px] 400px:text-[16px] group font-[600] leading-[24px] text-[#00B5E2] flex items-center gap-3 mt-[30px]">-->
+<!--                  Read More-->
+<!--                  <Icon icon="material-symbols:arrow-right-alt-rounded" class="text-[24px] group-hover:ml-1.5 transition-all duration-300" />-->
+<!--                </a>-->
               </div>
 
               <div class="w-full 400px:w-[500px]">

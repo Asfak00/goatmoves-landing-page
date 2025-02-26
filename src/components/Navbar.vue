@@ -17,10 +17,10 @@ import Layout from "../Layouts/Layout.vue";
           <li class="text-[14px] font-[500] hover:text-heading text-paragraph"><a href="#investor-relations">Investor Relations</a></li>
         </ul>
 
-        <button
-            class="py-[10px] hover:bg-[#757C88]/90 px-[15px] text-[14px] font-[600] text-[#F8FAFC] bg-[#757C88] underline ml-2">
-          Join Waitlist
-        </button>
+<!--        <button-->
+<!--            class="py-[10px] hover:bg-[#757C88]/90 px-[15px] text-[14px] font-[600] text-[#F8FAFC] bg-[#757C88] underline ml-2">-->
+<!--          Join Waitlist-->
+<!--        </button>-->
         <a href="https://netcapital.com/companies/goatmoves" target="_blank"
             class="py-[10px] px-[15px] hover:bg-primary_main/90 text-[14px] font-[600] text-[#F8FAFC] bg-primary_main underline">
           Invest Now
